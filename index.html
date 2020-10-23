@@ -5,7 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script>
+let fiat = {
+    make: "Fiat",
+    started: false,
+    start: function() {
+        this.started = true;
+    },
+    stop: function() {
+        this.started = false;
+    },
+    drive: function() {
+        if (this.started) {
+            alert("Бип!");
+        } else {
+            alert("Сначала запустите двигатель!");
+        }
+    }
+
+  }
+
+fiat.drive();
+fiat.fuel = 0;
+
+fiat.showFuel = function() {
+    alert("У меня в баке "+ this.fuel +" литров бензина!");
+};
+fiat.addFuel = function(amount) {
+    this.fuel += amount;
+}; 
+fiat.addFuel(5);
+alert(fiat);
+</script>
 <body>
-    
+  
 </body>
 </html>
